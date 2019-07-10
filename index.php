@@ -10,15 +10,34 @@
         'Mateo', 'Toni'
     ];
 
+    $alumnos2 = [];
 
     function alumno_random($nombres){
+
         shuffle($nombres);
-        print_r($nombres);
+
         foreach ($nombres as $alumno) {
-        echo('<p>'. $alumno .' va con</p>');
-    }
-    array_shift($alumno);
-    array_pop($alumno);
+       echo( $alumno .' va con ' );
+
+       array_push($alumnos2 , $alumno);
+        
+        }
+
+        foreach ($alumnos2 as $alumno) {
+            echo( $alumno );
+     
+             
+             }
+
+      
+
+        
+        
+            
+            
+            
+    
+   
     }
 ?>
 
