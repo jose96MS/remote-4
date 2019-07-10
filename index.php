@@ -11,13 +11,14 @@
     ];
 
 
-    function alumno_random(){
-        $alumnos_random = shuffle($nombres);
-        foreach ($alumnos_random as $alumno) {
-        echo('<p>'.$alumnos_random[0].'va con'.$alumnos_random[-1].'</p>');
-        array_shift($alumno_random);
-        array_pop($alumno_random);
-        }
+    function alumno_random($nombres){
+        shuffle($nombres);
+        print_r($nombres);
+        foreach ($nombres as $alumno) {
+        echo('<p>'. $alumno .' va con</p>');
+    }
+    array_shift($alumno);
+    array_pop($alumno);
     }
 ?>
 
@@ -33,7 +34,7 @@
 <body>
     <h1>SIMPLEMENTE RANDOM</h1>
     <?php
-    alumno_random();
+    alumno_random($nombres);
     ?>
 </body>
 </html>
