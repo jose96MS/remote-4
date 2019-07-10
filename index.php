@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>SIMPLEMENTE RANDOM</h1>
-
-    <?php
+   <?php
     $nombres = [
         'Jorge', 'Jaume',
         'Jose', 'Petro',
@@ -21,17 +10,30 @@
         'Mateo', 'Toni'
     ];
 
-   foreach($nombres AS $valor)
-   {
-       echo ' ' . $valor;
-   };
 
-   echo '<br>';
-
-   $random1 = array_rand($nombres, 2);
-   $random2 = array_rand($nombres, 2);
-
-   echo $nombres[$random[1]] . ' con ' . $clase[$random2[2]];
+    function alumno_random(){
+        $alumnos_random = shuffle($nombres);
+        foreach ($alumnos_random as $alumno) {
+        echo('<p>'.$alumnos_random[0].'va con'.$alumnos_random[-1].'</p>');
+        array_shift($alumno_random);
+        array_pop($alumno_random);
+        }
+    }
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random</title>
+</head>
+<body>
+    <h1>SIMPLEMENTE RANDOM</h1>
+    <?php
+    alumno_random();
+    ?>
 </body>
 </html>
